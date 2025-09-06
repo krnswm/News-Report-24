@@ -2,7 +2,7 @@ import React, {createContext, useState, useEffect} from 'react'
 
 export const NewsContext = createContext();
 
-const newsProvider = ({ children }) => {
+const NewsProvider = ({ children }) => {
     const [data, setData] = useState(null);
     const [headlines, setHeadlines] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -48,4 +48,4 @@ const newsProvider = ({ children }) => {
     )
 }
 
-export default NewsContext
+export default NewsProvider
