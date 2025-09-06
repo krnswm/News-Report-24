@@ -1,0 +1,78 @@
+.footer-content {
+    background-color: rgb(38,38,38);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 200px;
+    padding: 30px 20px 30px 30px;
+    margin-left: 30px;
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+    font-weight: 300;
+    font-size: 14px;
+    cursor: pointer;
+    border-left: 1px solid white;
+    padding-left: 20px;
+}
+
+.link-terms,
+.mail-link {
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
+}
+
+.mail-link:hover,
+.link-terms:hover{
+    color: red;
+    font-size: 16px;
+}
+
+.terms {
+    padding-bottom: 20px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 26px;
+}
+
+.facebook,
+.instagram,
+.twitter {
+    color: white;
+    transition: all 0.5s;
+}
+
+.facebook:hover,
+.facebook:active {
+    color: #316FF6;
+}
+
+.instagram {
+    font-size: 26px; 
+    transition: all 0.5s;
+}
+
+.instagram:hover,
+.instagram:active {
+   color: rgb(255, 111, 135);
+}
+
+
+.twitter:hover,
+.twitter:active{
+    color:#1DA1F2;
+}

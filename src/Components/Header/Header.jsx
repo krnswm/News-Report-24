@@ -3,7 +3,7 @@ import logo from '../../Assets/NewsLogo.png';
 import { IoSearchOutline } from "react-icons/io5";
 import './Header.css';
 
-function Header() {
+const Header = () => {
   return (
     <div className='header-container'>
         <div className='header-items'>
