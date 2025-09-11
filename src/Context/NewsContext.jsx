@@ -11,7 +11,7 @@ const NewsProvider = ({ children }) => {
         const fetchData = async () => {
             setLoading(true);
             try {
-                const response = await fetch('https://newsapi.org/v2/top-headlines/sources?apiKey=d983082ba3a1457cbd74e2e4886af9e2');
+                const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/top-headlines/sources?apiKey=${import.meta.env.VITE_NEWS_API_KEY}`);
                 const data = await response.json();
                 setHeadlines(data.sources);
             } catch (error) {
@@ -26,7 +26,7 @@ const NewsProvider = ({ children }) => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const url = "https://newsapi.org/v2/everything?q=everything&apiKey=d983082ba3a1457cbd74e2e4886af9e2";
+            const url = `${import.meta.env.VITE_API_BASE_URL}/everything?q=everything&apiKey=${import.meta.env.VITE_NEWS_API_KEY}`;
             try {
                 const response = await fetch(url);
                 if (!response.ok) {
