@@ -27,13 +27,13 @@ const Header = () => {
                 <nav className='navbar'>
                     <ul>
                         <li><Link to={'/top-headlines'} className='top-headlines options'>Top Headlines</Link></li>
-                        <li className='general options'>General</li>
-                        <li className='business options'>Business</li>
-                        <li className='entertainment options'>Entertainment</li>
-                        <li className='health options'>Health</li>
-                        <li className='science options'>Science</li>
-                        <li className='sports options'>Sports</li>
-                        <li className='technology options'>Technology</li>
+                        <Link to={'category/general'} className='general options'>General</Link>
+                        <Link to={'category/business'} className='business options'>Business</Link>
+                        <Link to={'category/entertainment'} className='entertainment options'>Entertainment</Link>
+                        <Link to={'category/health'} className='health options'>Health</Link>
+                        <Link to={'category/science'} className='science options'>Science</Link>
+                        <Link to={'category/sports'} className='sports options'>Sports</Link>
+                        <Link to={'category/technology'} className='technology options'>Technology</Link>
                     </ul>
                 </nav>
             </div>

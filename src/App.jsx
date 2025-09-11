@@ -7,6 +7,7 @@ import Footer from './Components/Footer/Footer';
 import Home from './Pages/Home/Home';
 import Headlines from './Pages/Headlines/Headlines';
 import NewsDetail from './Pages/NewsDetail/NewsDetail';
+import Category from './Pages/Category/Category';
 
 function App() {
   return <>
@@ -18,6 +19,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/top-headlines' element={<Headlines />} />
             <Route path='/newsdetail/:id' element = {<NewsDetail />} />
+            <Route path='/category/:categoryid' element={<Category />} />
           </Routes>
           <Footer />
         </BrowserRouter>
