@@ -19,14 +19,16 @@
 ```
 /
 ├── public/            # static assets
-├── src/               
+├── src/
+│   ├── assets/        
 │   ├── components/    # Reusable React components
 │   ├── pages/         # Page-level views
 │   ├── context/       # News context provider
-│   ├── styles/        # Global CSS styles
 │   └── App.jsx        # Root component
+│   └── main.jsx  
 ├── .env.example       # Example environment variables
 ├── package.json
+├── .gitignore
 ├── vite.config.js
 ├── eslint.config.js
 └── README.md
