@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
-import './category.css';
+import './Category.css';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { useParams } from 'react-router-dom';
 import { SearchContext } from '../../Context/SearchContext';
