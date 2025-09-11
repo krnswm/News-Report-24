@@ -6,6 +6,7 @@ import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import Home from './Pages/Home/Home';
 import Headlines from './Pages/Headlines/Headlines';
+import NewsDetail from './Pages/NewsDetail/NewsDetail';
 
 function App() {
   return <>
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/top-headlines' element={<Headlines />} />
+            <Route path='/newsdetail/:id' element = {<NewsDetail />} />
           </Routes>
           <Footer />
         </BrowserRouter>

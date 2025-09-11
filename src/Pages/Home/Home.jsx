@@ -3,6 +3,8 @@ import './Home.css';
 import { NewsContext } from '../../Context/NewsContext';
 import { SearchContext } from '../../Context/SearchContext';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import { Link } from 'react-router-dom';
+
 
 const Home = () => {
   const { data } = useContext(NewsContext);
@@ -19,7 +21,7 @@ const Home = () => {
 
   const filteredArticles = articlesWithImages.filter(article => article.title.toLowerCase().includes(searchQuery.toLowerCase()) || (article.description && article.description.toLowerCase().includes(searchQuery.toLowerCase()))
   );
-  
+
   const loadMoreData = () => {
     setDisplayedCount(prevCount => Math.min(prevCount + 6, articlesWithImages.length))
   }
@@ -30,17 +32,20 @@ const Home = () => {
     <div className='container'>
       <div className='masonry'>
         <InfiniteScroll
-          dataLength = {displayedArticles.length}
-          next = {loadMoreData}
-          hasMore = {displayedCount < filteredArticles.length}
+          dataLength={displayedArticles.length}
+          next={loadMoreData}
+          hasMore={displayedCount < filteredArticles.length}
           loader={<h4 style={{ textAlign: 'center', padding: '20px 0' }}>Loading...</h4>}
         >
-          <div className = 'masonry-container'>
+          <div className='masonry-container'>
             {displayedArticles.map((article, index) => (
               <article key={index} className='masonry-item'>
-                <img src={article.urlToImage} alt={article.title} className='card-image' />
+                <Link to={`/newsdetail/${article.title.toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-').replace(/-+/g, '-')}`} className='card-title' target='_self'><img src={article.urlToImage} alt={article.title} className='card-image' />
+                </Link>
                 <div className='card-content'>
-                  <h3 className='card-title'>{article.title}</h3>
+                  <Link to={`/newsdetail/${article.title.toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-').replace(/-+/g, '-')}`} className='card-title' target='_self'>
+                    <strong>{article.title}</strong>
+                  </Link>
                   <p className='card-description'>{article.description}</p>
                 </div>
               </article>

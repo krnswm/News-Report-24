@@ -1,0 +1,58 @@
+.news-container {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+.news-header {
+    font-size: 32px;
+}
+
+.news-author {
+    padding: 10px 0;
+}
+
+.news-author span {
+    font-weight: 500;
+}
+
+.image-poster {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+}
+
+.published {
+    padding: 10px 0
+}
+
+.published-date {
+    font-weight: 500;
+}
+
+.newsdetail-hr {
+    width: 100%;
+}
+
+.news-content {
+    font-size: 16px;
+    line-height: 35px;
+}
+
+.full-news-link {
+    margin: 20px 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.full-news-link a {
+    text-decoration: none;
+    color: red;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.full-news-link a:hover {
+    font-size: 16px;
+    text-decoration: underline;
+}
