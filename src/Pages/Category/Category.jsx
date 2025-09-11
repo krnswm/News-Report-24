@@ -61,7 +61,7 @@ const Category = () => {
                         <div key={source.id} className='category-item'>
                             <div className='headlines-category'>{source.name}</div>
                             <h2 className='category-description'>
-                                {source.description}
+                                <a href={source.url} className='category-title-link' target="_blank" rel="noopener noreferrer">{source.description}</a>
                             </h2>
                             <div className='category-more'>
                                 To dig deeper <a href={source.url} className='category-know-link' target="_blank" rel="noopener noreferrer">Click Here</a>

@@ -35,7 +35,8 @@ const Headlines = () => {
                         <div key={source.id} className='headline-item'>
                             <div className='headlines-name'>{source.name}</div>
                             <h2 className='headlines-description'>
-                                {source.description}
+                               <a href={source.url} className='title-link' target='_blank'
+                                rel='noopener noreferrer'>{source.description}</a>
                             </h2>
                             <div className='know-more'>
                                 To dig deeper <a href={source.url} className='know-link' target='_blank'

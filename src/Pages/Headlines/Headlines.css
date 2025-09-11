@@ -16,6 +16,7 @@
     gap: 40px;
     max-width: 1200px;
     width: 100%;
+    cursor: default;
 }
 
 .headline-item {
@@ -26,6 +27,17 @@
     padding: 20px;
     margin: 5px 50px;
     box-shadow: 0px 0px 12px rgba(0,0,0,0.5);
+    transition: all 0.5s;
+}
+
+.headline-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(255,0,0,0.3);
+}
+
+.title-link {
+    text-decoration: none;
+    color: black;
 }
 
 .headline-heading {
@@ -38,8 +50,15 @@
 }
 
 .headlines-description {
-    margin: 20px 0;
+    margin: 20px 0;transition: all 0.5s;
+    cursor: pointer;
 }
+
+.headlines-description:hover {
+    font-size: 26px;
+    text-decoration: underline;
+}
+
 
 .know-more {
     font-size: 14px;
