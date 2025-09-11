@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react';
 import {Link} from 'react-router-dom'
-import logo from '../../Assets/NewsLogo.png';
+import logo from '../../assets/NewsLogo.png';
 import { IoSearchOutline } from "react-icons/io5";
 import { SearchContext } from '../../Context/SearchContext';
 import './Header.css';
