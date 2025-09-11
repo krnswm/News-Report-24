@@ -1,9 +1,21 @@
-import React from 'react';
+import React, {useContext, useState} from 'react';
 import logo from '../../Assets/NewsLogo.png';
 import { IoSearchOutline } from "react-icons/io5";
+import { SearchContext } from '../../Context/SearchContext';
 import './Header.css';
 
 const Header = () => {
+    const {searchQuery, setSearchQuery} = useContext(SearchContext);
+    const [isSearchVisible, setIsSearchVisible] = useState(false);
+
+    const handleSearchCahnge = (event) => {
+        setSearchQuery(event.target.value)
+    }
+
+    const toggleSearchBar = () => {
+        setIsSearchVisible(prevState => !prevState)
+    }
+
   return (
     <div className='header-container'>
         <div className='header-items'>
@@ -25,8 +37,8 @@ const Header = () => {
                 </nav>
             </div>
             <div className='search-and-icon'>
-                <input type='text' placeholder='Search...' className='search-bar'/>
-                <IoSearchOutline className='search-icon' title='search'/>
+                <input type='text' placeholder='Search...' value={searchQuery} onChange={handleSearchCahnge} className = {`search-bar ${isSearchVisible ? 'visible' : ''}`}/>
+                <IoSearchOutline className='search-icon' title='search' onClick={toggleSearchBar}/>
             </div>
         </div>
     </div>

@@ -78,6 +78,10 @@ ul li {
     height: 30px;
 }
 
+input:focus {
+  outline: none;
+}
+
 .search-icon {
     font-size: 25px;
     cursor: pointer;
