@@ -1,4 +1,5 @@
 import React, {useContext, useState} from 'react';
+import {Link} from 'react-router-dom'
 import logo from '../../Assets/NewsLogo.png';
 import { IoSearchOutline } from "react-icons/io5";
 import { SearchContext } from '../../Context/SearchContext';
@@ -20,12 +21,12 @@ const Header = () => {
     <div className='header-container'>
         <div className='header-items'>
             <div className='together'>
-                {/* <Link to={"/"}> */}
+                <Link to={"/"}>
                     <img src={logo} alt='News Logo' className='logo' title="News Report 24"/>
-                {/* </Link> */}
+                </Link>
                 <nav className='navbar'>
                     <ul>
-                        <li className='top-headlines options'>Top Headlines</li>
+                        <li><Link to={'/top-headlines'} className='top-headlines options'>Top Headlines</Link></li>
                         <li className='general options'>General</li>
                         <li className='business options'>Business</li>
                         <li className='entertainment options'>Entertainment</li>
