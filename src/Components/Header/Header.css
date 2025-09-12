@@ -74,7 +74,6 @@ ul li {
     background-color: #f5f5f5;
     /* background-color: #070707; */
     margin-right: 10px;
-    padding: 10px;
     height: 30px;
 }
 
@@ -85,4 +84,153 @@ input:focus {
 .search-icon {
     font-size: 25px;
     cursor: pointer;
+}
+
+.hamburger{
+    display: none;
+}
+
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar-overlay.visible {
+    display: block;
+    opacity: 1;
+}
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease;
+    transform: translateX(100%);
+}
+
+.sidebar-overlay.visible .sidebar {
+    transform: translateX(0%);
+}
+
+.sidebar-nav ul {
+    list-style-type: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.sidebar-nav ul li {
+    padding: 10px;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.sidebar-link {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+    transition: all 0.5s;
+}
+
+.sidebar-nav ul li:hover .sidebar-link{
+    color: white;
+}
+
+.sidebar-nav ul li:hover{
+    background-color: black;
+}
+
+.cancel-btn{
+    font-size: 28px;
+    margin: 20px 20px 0 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 1425px) {
+    ul {
+        gap: 45px;
+    }
+}
+
+@media (max-width: 1390px) {
+    ul {
+        gap: 28px;
+    }
+}
+
+@media (max-width: 1275px) {
+    .logo {
+        width: 185px;
+        padding: 40px 40px 40px 0px;
+        margin-top: 15px;
+    }
+
+    .search-bar {
+        transform: translateX(100%); 
+        transition: transform 0.3s ease; 
+        opacity: 0; 
+        display: none;
+        position: absolute; 
+        right: 0;
+    }
+
+    .search-bar.visible {
+        transform: translateX(0); 
+        opacity: 1;
+        display: block;
+        overflow: hidden;
+        right: 70px;
+    }
+
+    .search-and-icon {
+        margin: 10px 30px;
+        gap: 15px;
+        position: relative; 
+        display: flex;
+        align-items: center;
+    }
+
+    .header-items {
+        flex-direction: row;
+        height: 80px;;
+        padding: 10px 15px;
+    }
+
+    .hamburger{
+        display: block;
+        font-size: 32px;
+        cursor: pointer;
+    }
+
+    .together ul{
+        display: none;
+    }
+}
+
+@media (max-width: 530px) {
+    .logo {
+        width: 150px;
+        padding: 10px;
+        margin-top: 15px;
+    }
+
+    .header-items {
+        flex-direction: row;
+        height: 70px;
+        padding: 10px 5px;
+    }
 }

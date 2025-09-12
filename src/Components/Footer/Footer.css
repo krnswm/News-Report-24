@@ -83,3 +83,11 @@
 .twitter:active{
     color:#1DA1F2;
 }
+
+@media(max-width: 825px) {
+    .footer-logo {
+        width: 150px;
+        padding: 30px 20px 30px 16px;
+        margin-left: 0px;
+    }
+}
