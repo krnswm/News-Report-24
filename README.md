@@ -1,7 +1,13 @@
 # 📰 News-Report-24  
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  [![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://news-report-24.vercel.app/)
+
 
 **News-Report-24** is a lightweight and responsive news reporting app that fetches real-time articles from **[NewsAPI.org](https://newsapi.org/)**. Built with **React (Vite)** and styled using **CSS**, it delivers the latest headlines in a clean, fast, and user-friendly interface.  
+
+---
+
+## 🔗 Live Demo
+Check out the live version here: [News Report 24](https://news-report-24.vercel.app/)
 
 ---
 
@@ -10,7 +16,10 @@
 - 🎨 Minimal and responsive UI with plain CSS  
 - 🔍 Option to filter or search for news (if enabled)  
 - 📱 Mobile-first design for seamless browsing  
-- ⚡ Super fast builds & hot reloading with **Vite**  
+- ⚡ Super fast builds & hot reloading with **Vite**
+- 🚀 Deployed live on [Vercel](https://vercel.com)
+
+- 👉 Try it live: [News Report 24](https://news-report-24.vercel.app/)
 
 ---
 
