@@ -15,7 +15,7 @@ const Category = () => {
         const fetchCategoryData = async () => {
             setLoading(true);
             try {
-                const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/sources?category=${categoryid}&apiKey=${import.meta.env.VITE_NEWS_API_KEY}`);
+                const response = await fetch(`/api/news?endpoint=top-headlines/sources&category=${categoryid}`);
                 if (!response.ok) {
                     throw new Error(`Error: ${response.status}`);
                 }
